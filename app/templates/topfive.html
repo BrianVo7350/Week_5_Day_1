@@ -2,9 +2,25 @@
 
 {% block content %}
 
-<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
 
-<h1>These Are My Top Five Artist And Athletes!</h1>
+<h1>TOP FIVE!</h1>
+<div>
+  {% for i in images %}
+  <img src="{{ images }}" alt="Image">
+  {% endfor %}
+</div>
+
+<div>
+  <ul>
+  {% for p in people %}
+    <li>
+      {{ p }}
+    </li>
+  {% endfor %}
+  </ul>
+</div>
+
+<!-- <h1>These Are My Top Five Artist And Athletes!</h1>
 <body>
   <p>
       BTS | Jay Park | Paul Blanco | Steph Curry | James Harden
@@ -29,6 +45,6 @@
     </div>
 
 </body>
-</html>
+</html> -->
 {% endblock %}
 

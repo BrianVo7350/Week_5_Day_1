@@ -11,4 +11,12 @@ def Signup_page():
 
 @app.route("/topfive")
 def topfive_page():
-    return render_template('topfive.html')
+    people = ['BTS', 'Jay Park', 'Paul Blanco', 'Steph Curry', 'James Harden']
+    images = [
+        'blanco.jpg'
+        'Bts.jpg'
+        'harden.jpg'
+        'Jaypark.jpg'
+        'steph.jpg'
+    ]
+    return render_template('topfive.html', p = people, i = images)
